@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ruleset xmlns="http://windup.jboss.org/schema/jboss-ruleset" id="DefaultPackageAndClassInclusionList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://windup.jboss.org/schema/jboss-ruleset http://windup.jboss.org/schema/jboss-ruleset/windup-jboss-ruleset.xsd">
+
+    <metadata>
+        <description>
+            This rule set configures the packages to search for by default for performance reasons
+        </description>
+        <dependencies>
+            <addon id="org.jboss.windup.rules,windup-rules-java,2.3.0.Final" />
+        </dependencies>
+    </metadata>
+
+    <rules>
+        <type-interest package="weblogic"/>
+        <type-interest package="javax.naming"/>
+        <type-interest package="java.lang" class="Class" method="forName"/>
+        <type-interest package="com.ibm"/>
+        <type-interest package="com.sonicsw"/>
+        <type-interest package="java.rmi" class="Remote"/>
+        <type-interest package="javax.persistence"/>
+        <type-interest package="javax.xml.rpc.handler" class="GenericHandler"/>
+        <type-interest package="javax.ejb" class="MessageDriven"/>
+        <type-interest package="javax.ejb" class="Stateless"/>
+        <type-interest package="javax.ejb" class="Stateful"/>
+        <type-interest package="oracle"/>
+        <type-interest package="com.oracle"/>
+        <type-interest package="javax.jws" class="WebService"/>
+        <type-interest package="javax.management"/>
+        <type-interest package="javax.ws.rs" class="Path"/>
+    </rules>
+</ruleset>
